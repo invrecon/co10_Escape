@@ -4,6 +4,12 @@ import shutil
 import subprocess
 from datetime import datetime
 
+from config import configure_sogpf, configure_ws, configure_main
+
+configure_sogpf()
+configure_ws()
+configure_main()
+
 print("Loading config...") 
 with open('Configs/config.json') as json_data_file:
     data = json.load(json_data_file)
